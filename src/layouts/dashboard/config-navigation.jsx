@@ -8,34 +8,29 @@ const icon = (name) => (
 
 const navConfig = [
   {
-    title: 'dashboard',
+    title: 'News Quant',
     path: '/',
-    icon: icon('ic_analytics'),
+    icon: icon('newspaper-solid'),
   },
   {
-    title: 'user',
+    title: 'Real Economic indicators',
     path: '/user',
-    icon: icon('ic_user'),
+    icon: icon('chart-bar-regular'),
   },
   {
-    title: 'product',
+    title: 'One Score',
     path: '/products',
-    icon: icon('ic_cart'),
+    icon: icon('star-solid'),
   },
   {
-    title: 'blog',
+    title: 'Alert Central',
     path: '/blog',
-    icon: icon('ic_blog'),
+    icon: icon('bell-regular'),
   },
   {
-    title: 'login',
+    title: 'Customer Support',
     path: '/login',
-    icon: icon('ic_lock'),
-  },
-  {
-    title: 'Not found',
-    path: '/404',
-    icon: icon('ic_disabled'),
+    icon: icon('phone-solid'),
   },
 ];
 

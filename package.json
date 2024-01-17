@@ -1,6 +1,6 @@
 {
-  "name": "@minimal/material-kit-react",
-  "author": "minimals.cc",
+  "name": "dashboard",
+  "author": "Heli Patel",
   "licence": "MIT",
   "version": "1.8.0",
   "private": false,
@@ -23,6 +23,9 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@faker-js/faker": "^8.1.0",
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
+    "@fortawesome/free-regular-svg-icons": "^6.5.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@iconify/react": "^4.1.1",
     "@mui/lab": "^5.0.0-alpha.147",
     "@mui/material": "^5.14.12",

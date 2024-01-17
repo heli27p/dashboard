@@ -8,8 +8,6 @@ import IconButton from '@mui/material/IconButton';
 import InputAdornment from '@mui/material/InputAdornment';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
 
-import { bgBlur } from 'src/theme/css';
-
 import Iconify from 'src/components/iconify';
 
 // ----------------------------------------------------------------------
@@ -18,9 +16,6 @@ const HEADER_MOBILE = 64;
 const HEADER_DESKTOP = 92;
 
 const StyledSearchbar = styled('div')(({ theme }) => ({
-  ...bgBlur({
-    color: theme.palette.background.default,
-  }),
   top: 0,
   left: 0,
   zIndex: 99,
@@ -37,7 +32,14 @@ const StyledSearchbar = styled('div')(({ theme }) => ({
   },
 }));
 
-// ----------------------------------------------------------------------
+const SearchInput = styled(Input)(({ theme }) => ({
+  border: `1px solid ${theme.palette.grey[300]}`, // Thin grey border
+  borderRadius: theme.shape.borderRadius,
+  display: 'flex',
+  alignItems: 'center',
+  padding: theme.spacing(1),
+  marginRight: theme.spacing(1),
+}));
 
 export default function Searchbar() {
   const [open, setOpen] = useState(false);
@@ -61,7 +63,7 @@ export default function Searchbar() {
 
         <Slide direction="down" in={open} mountOnEnter unmountOnExit>
           <StyledSearchbar>
-            <Input
+            <SearchInput
               autoFocus
               fullWidth
               disableUnderline
@@ -74,7 +76,15 @@ export default function Searchbar() {
                   />
                 </InputAdornment>
               }
-              sx={{ mr: 1, fontWeight: 'fontWeightBold' }}
+              endAdornment={
+                <InputAdornment position="end">
+                  <Iconify
+                    icon="eva:microphone-fill"
+                    sx={{ color: theme => theme.palette.primary.main, width: 20, height: 20 }}
+                  />
+                </InputAdornment>
+              }
+              sx={{ fontWeight: 'fontWeightBold' }}
             />
             <Button variant="contained" onClick={handleClose}>
               Search
